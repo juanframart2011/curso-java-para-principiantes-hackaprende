@@ -10,16 +10,31 @@ public class Main {
                 "Troya", "Yo Robot","Ip Man",
         };
 
-        playMovie(titleArray, 0);
-        pause();
+        String MovieCurrent = playMovie(titleArray, 0);
+        pause(MovieCurrent);
     }
 
-    public static void playMovie(String[] movies, int index ){
-        String title = movies[index];
-        System.out.println("Playing movie: " + title);
+    public static String playMovie(String[] movies, int index ){
+
+        if( index < movies.length ){
+            String title = movies[index];
+            System.out.println("Playing movie: " + title);
+
+            return movies[index];
+        }
+        else{
+            System.out.println("Movie not found");
+            return "";
+        }
     }
 
-    public static void pause(){
-        System.out.println("pause...");
+    public static void pause(String movie){
+        if( movie.isEmpty() ){
+
+            System.out.println("Movie not found");
+        }
+        else{
+            System.out.println("pause movie ... "+movie);
+        }
     }
 }
