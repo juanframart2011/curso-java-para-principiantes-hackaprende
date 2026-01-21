@@ -7,12 +7,15 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
-        Movie movieNew = new Movie("Toy Story", "Familiar", 60);
-        Movie movieNew2 = new Movie("Toy Story", "Familiar");
-        Movie movieNew3 = new Movie();
+        Movie movieNew = new Movie();
+        movieNew.setName("New Movie");
+        movieNew.setGenre("Comedy");
+        movieNew.setDuration(89);
+        movieNew.setWonOscar(true);
 
-        movieNew2.play();
-        int movieTotalFrames = movieNew2.getTotalFrames();
-        System.out.println(movieTotalFrames);
+        Series serieNew = new Series();
+        movieNew.setName("New Serie");
+        movieNew.setGenre("Comedy");
+        movieNew.setDuration(52);
     }
 }
